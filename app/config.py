@@ -28,8 +28,8 @@ MONGO_URI = PROD_MONGO_URI
 MONGO_DATABASE = PROD_MONGO_DATABASE
 
 
-print('MONGO_URI: ', MONGO_URI)
-print('LOCAL_MONGO_DATABASE: ', LOCAL_MONGO_DATABASE)
+print("Seem's like something is working")
+print("=_+ Let's Rock's +_=")
 
 # --------------------- Local Folder Settings----------------------------
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
