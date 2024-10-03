@@ -1,0 +1,16 @@
+@hostUrl = http://localhost:5000
+
+###
+@loanId = new
+POST {{hostUrl}}/server/api/loans/update/{{loanId}}
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMzUyNTgwNCwianRpIjoiMzYyZTM1NzktMDMwYi00YmYyLThmNDAtNGQyZWYyYWI4Y2Y3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IlBVXzZQNTcxQVk3IiwibmJmIjoxNzEzNTI1ODA0LCJleHAiOjE3MTM1MjY3MDR9.KCQiLt9sROmFFgiRmK2hgBxodlIYAMbAMo_eFdtDlcw
+
+{
+    "type": "monthly",
+    "lendingAmount": 10000,
+    "interest": 10,
+    "startDate": "2024-01-01T14:37:24.135Z",
+    "endDate": "2025-01-01T14:37:24.135Z",
+    "fineInterest": 5,
+}

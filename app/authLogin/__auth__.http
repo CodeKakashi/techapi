@@ -1,0 +1,43 @@
+@hostUrl = http://localhost:5000
+
+
+
+###
+POST {{hostUrl}}/server/api/login
+content-type: application/json
+
+{
+    "email": "sample1@gmail.com",
+    "password": 123456
+}
+
+###
+POST {{hostUrl}}/server/api/admin/signUp
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNzkzNDIwMywianRpIjoiMTM2M2E0MWEtZGU1ZS00YTJhLTg2YWQtNDk3YWRmZWZkNDhkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6InNhbXBsZTFAZ21haWwuY29tIiwibmJmIjoxNzA3OTM0MjAzLCJleHAiOjE3MDc5MzUxMDN9.3SgB7TYAfvfjJdSeEtMpdR5dmecY_T0PquzS263mbl0 
+
+{
+  "email": "example@example.com",
+  "mobileNumber": "1234567890",
+  "aadharNumber": "123456789012",
+  "panNumber": "ABCDE1234F",
+  "minAmount": 1000.0,
+  "maxFund": 5000.0,
+  "gstnNumber": "GSTN123456789",
+  "address": "123 Street, City",
+  "selectedPlan": null,
+  "password": "password123",
+  "confirmPassword": "password123",
+  "line1": "123 Street",
+  "line2": "Apt 2",
+  "city": "City",
+  "ut": "State",
+  "addedBy": {
+    "field1": "value1",
+    "field2": "value2"
+  },
+  "pincode": "123456",
+  "status": "active"
+}
+
+

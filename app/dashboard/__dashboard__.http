@@ -1,0 +1,10 @@
+@hostUrl = http://localhost:5000
+
+###
+GET {{hostUrl}}/server/api/dashboard
+
+###
+GET {{hostUrl}}/server/api/admin/census/userCou/als
+
+###
+GET {{hostUrl}}/server/api/client/schedule/USERFY4KQ6ZNRH_1720523742

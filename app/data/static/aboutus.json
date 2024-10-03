@@ -1,0 +1,28 @@
+{
+    "_id" : "developer_0001",
+    "aboutUs" : "We are a multiversus company we provide various service like mobile app development, website development, etc..",
+    "companyName" : "Kuriyeedu",
+    "foundedYear" : 2023,
+    "mission" : "Our mission is to empower businesses and individuals by delivering innovative and tailored digital solutions that drive growth and success.",
+    "vision" : "To become the leading force in shaping the future of technology, creating a seamless digital experience across all dimensions of life.",
+    "team" : [ 
+        {
+            "name" : "string",
+            "position" : "string",
+            "bio" : "string",
+            "socialLinks" : {
+                "linkedin" : "url",
+                "twitter" : "url"
+            }
+        }
+    ],
+    "email" : "asdk@sald.in",
+    "contactDetails" : 6383845870,
+    "testimonials" : [ 
+        {
+            "author" : "string",
+            "comment" : "string",
+            "date" : "date"
+        }
+    ]
+}

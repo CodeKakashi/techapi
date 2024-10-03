@@ -1,0 +1,29 @@
+{
+    "_id" : "OWNERFKP28PQEPP_1707872333",
+    "name" : "Owner Name",
+    "email" : "owner@kuriyeedu.in",
+    "mobile" : "9092292222",
+    "aadhar" : "333355556666",
+    "pan" : "ASDAD1282L",
+    "minFund" : 1.0,
+    "maxFund" : 1000000000000.0,
+    "gstn" : "1272tg21",
+    "pincode" : "21989",
+    "line1" : "line one address",
+    "line2" : "line two address",
+    "city" : "City Sample",
+    "password" : "$2b$12$x8sgTj6ZisBwJoAdHrKQZOXPNZbPTPDmeqJLJOXxp05Eos1Kk.Hwy",
+    "ut" : "owner",
+    "label" : "Owner",
+    "status" : "success",
+    "createdAt" : 1707872333,
+    "createdBy" : {
+        "key" : "owner",
+        "label" : "Owner"
+    },
+    "updatedAt" : 1708428478,
+    "updatedBy" : {
+        "key" : "owner",
+        "label" : "Owner"
+    }
+}
