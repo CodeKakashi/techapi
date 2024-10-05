@@ -3,15 +3,15 @@ import string
 import bcrypt
 from flask import request
 import pytz
-from app.config import LOCAL_MONGO_DATABASE, LOCAL_MONGO_URI
+from app.config import PROD_MONGO_DATABASE, PROD_MONGO_URI
 import pymongo
 from random import choice
 import calendar
 from flask_bcrypt import Bcrypt
 
 
-client = pymongo.MongoClient(LOCAL_MONGO_URI)
-mdb = client[LOCAL_MONGO_DATABASE]
+client = pymongo.MongoClient(PROD_MONGO_URI)
+mdb = client[PROD_MONGO_DATABASE]
 
 # Function to hash the password
 def hash_password(password):
