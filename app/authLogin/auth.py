@@ -104,7 +104,7 @@ class AdminSignUp(Resource):
             onGoingDue = 1
             pendingDues = []
             userData["generatedPayment"] = generatedPayment
-            # lAmount -> amount with interest 
+            # lAmount -> amount with interest
             lAmount = generatedPayment * int(totalPeriod)
             userData["lAmount"] = lAmount
             userData["pendingAmount"] = lAmount
@@ -130,11 +130,13 @@ class AdminSignUp(Resource):
             uMeta = mdb.users.find_one(userMetafilter)
             if uMeta:
                 rId = uMeta["rootId"]
+                uloanAmount = uMeta["loanAmount"]
+                uName = uMeta["name"]
                 if rId != rootId:
                     return {
                         "status": 2,
                         "class": "error",
-                        "message": f"{label} has already borrowed amount of {loanAmount} ",
+                        "message": f"{uName} has already borrowed amount of {uloanAmount} from an another admin !!!",
                     }
 
         if userType == "user" or userType == "subadmin":

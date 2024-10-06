@@ -42,7 +42,8 @@ class AdminCensus(Resource):
 
         matchFilter = {
             "$match": {
-                "ut": "admin"  # Only include documents where the type is "admin"
+                "ut": "admin",  # Only include documents where the type is "admin"
+                "status": "active"
             }
         }
 

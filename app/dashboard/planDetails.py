@@ -63,7 +63,7 @@ class CollectionList(Resource):
                     # Append in the Pending List
                     pList.append(dueMeta)
 
-        cCursor = mdb.cList.find({})
+        cCursor = mdb.cList.find({"entryBy": suid})
 
         for list in cCursor:
             clist.append(list)
@@ -84,7 +84,7 @@ class CollectionList(Resource):
 class UpdateCollectionList(Resource):
     @validate_auth()
     def post(self, suid, suser):
-        print('suser: ', suser)
+        print("suser: ", suser)
         input = request.get_json(silent=True)
         form = UpdateColSchema().load(input)
         showForm = form.get("showForm", False)
@@ -108,10 +108,10 @@ class UpdateCollectionList(Resource):
             else:
                 totalCollected = totalAmount - lAmount
 
-            # Currently this logic is wrong must update       
+            # Currently this logic is wrong must update
             cDue = {
                 "_id": f"CD{uid}X00{onGoingDue}",
-                "dueNumber" : onGoingDue,
+                "dueNumber": onGoingDue,
                 "generatedPayment": generatedPayment,
                 "paymentMode": paymentMode,
                 "entryBy": suid,
@@ -140,7 +140,9 @@ class UpdateCollectionList(Resource):
             )
 
             # Unset pending list
-            mdb.pDues.delete_one({"uid": uid, "dueNumber": onGoingDue, "allotedTo": suid})
+            mdb.pDues.delete_one(
+                {"uid": uid, "dueNumber": onGoingDue, "allotedTo": suid}
+            )
 
         else:
             userMeta = getUserSnippet(uid, False)
